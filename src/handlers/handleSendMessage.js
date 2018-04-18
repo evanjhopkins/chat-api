@@ -1,4 +1,3 @@
-const storageAdapter = require('../adapters/storage');
 const md5 = require('md5');
 
 /**
@@ -18,7 +17,7 @@ function getThreadId(usernameFrom, usernameTo) {
     return hash;
 }
 
-module.exports = function (request, response) {
+module.exports = function (storageAdapter, request, response) {
     const { body, params } = request;
     // parse needed data from incoming request
     const usernameFrom = body.usernameFrom ? body.usernameFrom.trim().toLowerCase() : null;

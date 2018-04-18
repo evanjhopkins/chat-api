@@ -1,6 +1,4 @@
-const storageAdapter = require('../adapters/storage');
-
-module.exports = function (request, response) {
+module.exports = function (storageAdapter, request, response) {
     const { params } = request;
     // parse the needed param
     const username = params.username ? params.username.trim().toLowerCase() : null;

@@ -7,7 +7,6 @@ theoretically hot-swap different storage methods here. So maybe there is a produ
 a development adapter (e.g. some kind of local storage). This can be very useful for things like storage, logging, and lots more!
  */
 const storageAdapter = require('./adapters/storage');
-
 const app = express();
 
 // use port specified in env, or fallback to default
@@ -23,7 +22,7 @@ storageAdapter.init();
 repeating the same code over and over again.
  */
 routes.forEach(({method, path, handler}) => {
-    app[method](path, handler);
+    app[method](path, (...args) => handler(storageAdapter, ...args));
 });
 
 // start server
