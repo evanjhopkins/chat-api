@@ -1,0 +1,27 @@
+{
+  "name": "chat-api",
+  "version": "1.0.0",
+  "description": "A RESTful chat API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanjhopkins/chat-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evanjhopkins/chat-api/issues"
+  },
+  "homepage": "https://github.com/evanjhopkins/chat-api#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "lowdb": "^1.0.0",
+    "md5": "^2.2.1"
+  }
+}
