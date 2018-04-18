@@ -1,10 +1,5 @@
 const md5 = require('md5');
 
-/**
- @param {String} usernameFrom - username the message is comming from
- @param {String} usernameTo - username the message is going to
- @return {String} hash - key that uniquely identifies the conversation between the two provided users
- */
 function getThreadId(usernameFrom, usernameTo) {
     // put the usersnames into a list
     const list = [usernameFrom, usernameTo];

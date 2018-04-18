@@ -22,6 +22,7 @@ storageAdapter.init();
 repeating the same code over and over again.
  */
 routes.forEach(({method, path, handler}) => {
+    // storageAdapter is passed in to handlers using dependency injection
     app[method](path, (...args) => handler(storageAdapter, ...args));
 });
 
@@ -29,6 +30,3 @@ routes.forEach(({method, path, handler}) => {
 app.listen(port, () => {
     console.log(`Chat API running on localhost:${port}`)
 });
-
-
-
