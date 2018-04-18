@@ -3,6 +3,7 @@ Here is a very simple chat API. It allows for one-on-one conversations between u
 
 # How to run locally
 `npm i` - Install Dependencies
+
 `npm start` - Run web service locally
 
 # Routes
